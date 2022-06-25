@@ -51,8 +51,8 @@ app.post("/login", (req, res) => {
         expires_in: data.body.expires_in,
       });
     })
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      res.json({ error });
       res.sendStatus(400);
     });
 });
