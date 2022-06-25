@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refresh_token;
